@@ -11,7 +11,7 @@ public class ArrayTasks {
      * Return a String[] array that will list all the seasons of the year, starting with winter.
      */
     public String[] seasonsArray() {
-
+        return new String[]{"winter", "spring", "summer", "autumn"};
     }
 
     /**
@@ -25,7 +25,11 @@ public class ArrayTasks {
      * length = 5  -> [1, 2, 3, 4, 5]
      */
     public int[] generateNumbers(int length) {
-
+        int[] nums = new int[length];
+        for (int i = 0; i < length; i++) {
+            nums[i] = i+1;
+        }
+        return nums;
     }
 
     /**
@@ -37,7 +41,12 @@ public class ArrayTasks {
      * arr = [5, -3, -4] -> sum = -2
      */
     public int totalSum(int[] arr) {
-
+        int sum = 0;
+        for (int a:
+             arr) {
+            sum += a;
+        }
+        return sum;
     }
 
     /**
@@ -50,7 +59,11 @@ public class ArrayTasks {
      * arr = [5, -3, -4],   number = 10    ->  -1
      */
     public int findIndexOfNumber(int[] arr, int number) {
-
+        int f = 0;
+        for (int i = 0; i < arr.length; i++) {
+           f = number == arr[i]? i:0;
+        }
+        return f;
     }
 
     /**
@@ -63,7 +76,11 @@ public class ArrayTasks {
      * arr = ["pineapple", "apple", "pen"] -> ["pen", "apple", "pineapple"]
      */
     public String[] reverseArray(String[] arr) {
-
+        String [] newArr = new String[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            newArr[i] = arr[arr.length-i-1];
+        }
+        return newArr;
     }
 
     /**
@@ -78,7 +95,18 @@ public class ArrayTasks {
      * arr = [1, 2]         -> [1, 2]
      */
     public int[] getOnlyPositiveNumbers(int[] arr) {
-
+        String ab = "";
+        for (int j : arr) {
+            if (j > 0) {
+                ab += String.valueOf(j);
+            }
+        }
+        int[] newArray = new int[ab.length()];
+        for (int i = 0; i < ab.length(); i++) {
+            String k = String.valueOf(ab.charAt(i));
+            newArray[i] = Integer.valueOf(k);
+        }
+        return newArray;
     }
 
     /**
